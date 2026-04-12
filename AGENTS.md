@@ -50,7 +50,6 @@ For feature work, follow this sequence explicitly:
 Mandatory ordering constraints for the implementation plan:
 
 - The first plan step must always run `docs-guidance-check` (when available) and address/handle findings according to policy.
-- The last plan step must always run `docs-state-sync` in proposal mode.
 
 ## AI Workflow (Backend)
 
@@ -73,7 +72,6 @@ Mandatory ordering constraints for the implementation plan:
 - Backend scan: `skills/backend-quality-scan`.
 - Frontend scan: `skills/frontend-quality-scan`.
 - Docs guidance check: `skills/docs-guidance-check`.
-- Docs state sync (proposal-only): `skills/docs-state-sync`.
 
 ## Secrets
 
