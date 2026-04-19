@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs Guidance Check"
+  short_description: "Check docs governance and guidance quality"
+  default_prompt: "Run a pre-implementation docs safety scan across AGENTS.md and docs governance files (especially docs/README.md). Report High/Medium/Low findings with evidence and proposed fixes, including mandatory semantic sanity checks (actionability, clarity, undefined/circular terms, and practical workflow conflicts). Do not perform decisions/features/ideas drift sync."

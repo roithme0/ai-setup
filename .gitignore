@@ -1,0 +1,11 @@
+/docs/specs/backend/*
+!/docs/specs/backend/.gitkeep
+
+/docs/specs/cross-service/*
+!/docs/specs/cross-service/.gitkeep
+
+/docs/specs/frontend/*
+!/docs/specs/frontend/.gitkeep
+
+/ui-tempaltes/*
+!/ui-tempaltes/.gitkeep
