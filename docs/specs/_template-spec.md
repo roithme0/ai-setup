@@ -44,6 +44,16 @@ Related specs: <optional list of spec filenames, or "None">
 - The umbrella spec must list all related service implementation spec filenames in `Related specs`.
 - Each service implementation spec must reference the umbrella spec filename in `Related specs`.
 
+## Cross-Service Contract Rules (Required)
+
+- When multiple services are impacted, the umbrella spec is the single source of truth for the cross-service API contract.
+- Service implementation specs must not duplicate full cross-service contract details; they must reference the umbrella contract and describe only service-local implications.
+- The umbrella API contract must define, when applicable:
+  - Endpoints/events affected.
+  - Request/response schema expectations (required/optional fields).
+  - Error/status semantics.
+  - Compatibility/cutover expectations for contract changes.
+
 ## Spec Placement Rules (Required)
 
 - Place specs under service-based folders:
@@ -74,6 +84,10 @@ Use this section set when `Type: implementation`.
 ## Contract
 
 <API/DTO/events/storage contract changes or explicit "No contract changes".>
+
+## Contract Conformance
+
+<If an umbrella spec exists: reference its API contract section and list only service-local implementation implications. Otherwise: "Not applicable".>
 
 ## Behavior
 
@@ -119,6 +133,10 @@ Use this section set when `Type: umbrella`.
 
 <Finalized architecture/product direction at high level.>
 
+## API Contract (Cross-Service)
+
+<Cross-service API contract source of truth. Define endpoints/events, request/response schema, error semantics, and compatibility/cutover expectations.>
+
 ## Spec Split and Sequencing
 
 1. <Sub-spec A>
@@ -147,6 +165,7 @@ Use this section set when `Type: umbrella`.
 - Required section skeleton for the chosen type is fully present.
 - `Scope` and `Non-Goals` do not overlap.
 - Contract statements are concrete (or explicitly unchanged).
+- For multi-service work, umbrella spec contains the cross-service API contract and implementation specs reference it via `Contract Conformance`.
 - Acceptance criteria are testable and unambiguous.
 - Open questions are real unresolved items, or explicitly `None`.
 - Multi-spec split and placement rules are satisfied for the impacted services/layers.
