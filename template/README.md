@@ -22,12 +22,6 @@ Use it as the root documentation contract for your project. Replace the placehol
 - **Primary UI library**: `[Replace or remove]`
 - **Other important tooling**: `[Add items worth knowing before implementation]`
 
-## Project Skills
-
-- Manual skills live in `skills/`.
-- `[List project-specific skills that assistants should know about.]`
-- `[Remove this section if the project does not use local skills.]`
-
 ## Canonical Reading Order
 
 1. `AGENTS.md` (repo root): global working rules and constraints.

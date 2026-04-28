@@ -10,7 +10,7 @@ The root of this repository explains the template package itself. The reusable f
 - [`template/README.md`](./template/README.md): source-of-truth and context-loading guide intended for the target project.
 - [`template/.codex/config.toml`](./template/.codex/config.toml): optional project-level Codex config with a small starter set of MCP servers. Remove entries you do not want in the target project.
 - [`template/docs/`](./template/docs): workflow and documentation conventions for spec-driven delivery.
-- [`template/skills/`](./template/skills): reusable review and quality-check skills.
+- [`template/.codex/skills/`](./template/.codex/skills): reusable review and quality-check skills.
 - [`template/ui-templates/`](./template/ui-templates): reserved space for reusable UI starter assets.
 
 ## How To Use It
@@ -37,10 +37,10 @@ The root of this repository explains the template package itself. The reusable f
 ├── README.md
 └── template/
     ├── .codex/
+    │   └── skills/
     ├── AGENTS.md
     ├── README.md
     ├── docs/
-    ├── skills/
     └── ui-templates/
 ```
 
