@@ -1,68 +1,53 @@
-# Docs Source-of-Truth Guide
+# AI Setup Template Repo
 
-This folder is intended to be mandatory project context for both humans and coding assistants.
+This repository packages a reusable AI collaboration setup that can be copied into another software project and adapted there.
 
-## Project Goal
+The root of this repository explains the template package itself. The reusable files that consumers should copy live in [`template/`](./template).
 
-Ship a hobby cooking assistant built on a FastAPI backend and Angular frontend that leans into the AI ideas captured in `docs/ideas.md`, while using the project as a hands-on learning vehicle for core AI concepts such as context engineering, streaming, RAG, and related techniques.
+## What This Repo Contains
+
+- [`template/AGENTS.md`](./template/AGENTS.md): baseline agent operating rules for a target project.
+- [`template/README.md`](./template/README.md): source-of-truth and context-loading guide intended for the target project.
+- [`template/docs/`](./template/docs): workflow and documentation conventions for spec-driven delivery.
+- [`template/skills/`](./template/skills): reusable review and quality-check skills.
+- [`template/ui-templates/`](./template/ui-templates): reserved space for reusable UI starter assets.
+
+## How To Use It
+
+1. Copy the contents of [`template/`](./template) into the root of your project.
+2. Review `AGENTS.md` and `README.md` first, then adjust them to match your stack, workflows, and constraints.
+3. Update the docs in `docs/` so they describe your actual project rather than this starter baseline.
+4. Remove parts you will not maintain. A smaller, accurate setup is better than a larger stale one.
+
+## What To Customize First
+
+- Project goal and scope in `README.md`
+- Stack- or framework-specific rules in `AGENTS.md`
+- Delivery workflow in `docs/spec-driven-delivery.md`
+- UI/style guidance in `docs/frontend-style.md`
+- Any skills that reference tools, directories, or workflows your project does not use
 
 ## Repo Layout
 
-- backend/
-- frontend/
+```text
+.
+├── README.md
+└── template/
+    ├── AGENTS.md
+    ├── README.md
+    ├── docs/
+    ├── skills/
+    └── ui-templates/
+```
 
-## Tech Stack
+## Maintainer Notes
 
-- Backend: Python + FastAPI + SQLModel/SQLAlchemy
-- Frontend: Angular
-- Database: PostgreSQL
-- Migrations: Alembic
-- Primary UI library: Angular Material
+This repository is template-focused. There is currently no root-level application to build, run, or test.
 
-## Project Skills
+When changing template behavior or guidance, treat these files as the primary source of truth:
 
-- Manual skills live in `skills/`.
-- Backend scan: `skills/backend-quality-scan`.
-- Frontend scan: `skills/frontend-quality-scan`.
-- Docs guidance check: `skills/docs-guidance-check`.
-- Docs state sync (proposal-only): `skills/docs-state-sync`.
-- Decisions prune pass: `skills/decisions-prune-pass`.
+1. [`template/AGENTS.md`](./template/AGENTS.md)
+2. [`template/README.md`](./template/README.md)
+3. Task-relevant normative docs referenced from `template/README.md`
 
-## Canonical Reading Order
-
-1. `AGENTS.md` (repo root): global working rules and constraints.
-2. `docs/README.md`: this contract and navigation.
-3. `docs/decisions.md`: accepted architectural and workflow decisions.
-4. `docs/spec-driven-delivery.md`: mandatory process for feature delivery sequencing and gates.
-5. `docs/specs/*.md`: active feature specs and acceptance criteria.
-6. `docs/frontend-style.md`: frontend UI style baseline for implementation consistency.
-7. `docs/features.md`: current-state snapshot of currently available atomic user-facing capabilities (not a history log).
-8. `docs/ideas.md`: backlog ideas (not commitments).
-
-## Normative vs Informative
-
-- Normative: `docs/README.md`, `docs/decisions.md`, `docs/spec-driven-delivery.md`, `docs/frontend-style.md`, `docs/features.md` and `docs/specs/*.md`.
-- Informative only: `docs/ideas.md`.
-
-If documents conflict, prefer:
-1. Newer dated decision/spec content.
-2. Then this reading order.
-
-Reading order defines context-loading order; for direct conflicts, apply the precedence rules above.
-
-## Operational Definitions
-
-- Non-trivial change/work: any change that affects behavior, APIs, schemas, cross-layer integration (backend + frontend), or spans multiple files.
-- Important project decision: a decision that changes architecture, data modeling, workflow policy, documentation governance, or external dependency strategy.
-
-## Assistant Contract
-
-- Treat normative docs as required context before making non-trivial changes.
-- Required context means task-relevant normative docs; for `docs/specs/*.md`, read only specs related to the feature/area being changed.
-- For feature work, treat `docs/spec-driven-delivery.md` as required context.
-- For frontend UI/styling work, treat `docs/frontend-style.md` as required context.
-- Cite the deciding file when implementing or reviewing behavior/API changes.
-- Add important project decisions to `docs/decisions.md`.
-- Keep new feature specs in `docs/specs/` and link them from relevant PR/notes.
-- Create new specs from `docs/specs/_template-spec.md`.
-- Keep spec-authoring rules centralized in `docs/specs/_template-spec.md` (do not duplicate/extend them in other docs).
+Keep the root README repo-specific, and keep reusable consumer-facing assets under `template/`.
