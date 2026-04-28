@@ -1,20 +1,32 @@
 # Spec-Driven Delivery Workflow
 
-For feature work, follow this sequence explicitly:
+## Global Rules
 
-1. Sparring phase: Collaboratively develop the concept in chat until scope and behavior are clear. Before requesting explicit user confirmation, ask all clarifying questions required to draft the spec; ask no more than 5 questions at a time. If more than 5 clarifications are needed, ask them in batches of 5 and only continue with the next batch after the previous answers are clarified. Treat this step as complete only after explicit user confirmation before moving to the spec phase.
-2. Spec phase: Document the agreed sparring result in a spec file before implementation planning.
-3. Spec review phase: Request explicit user review of the spec file and discuss details before suggesting a step-by-step implementation plan.
-4. Plan phase: Propose a step-by-step implementation plan derived from the approved spec file.
-5. Implementation phase: Execute exactly one planned step at a time, then pause for user review/discussion and wait for explicit go before starting the next step.
-6. Final quality phase: After all planned steps are complete, re-check touched/impacted code and offer small, low-risk refactorings. Do not apply refactorings unless the user agrees.
+- **Clarification batch limit**: Ask no more than 3 clarifying questions at a time. If more clarifications are needed, ask them in batches of 3 and only continue with the next batch after the previous answers are clarified.
+- **Explicit step gate**: Do not proceed to the next workflow phase or the next implementation step until the user explicitly says so. `go`, `approved`, and `continue` are equivalent approvals.
 
-Spec authoring guardrail:
+## Workflow Phases
+
+1. **Sparring phase**: Collaboratively develop the concept in chat until scope and behavior are clear. Before requesting user confirmation, ask all clarifying questions required to draft the spec, following the clarification batch limit.
+2. **Spec phase**: Document the agreed sparring result in a spec file before implementation planning.
+3. **Spec review phase**: Request explicit user review of the spec file and discuss details before suggesting a step-by-step implementation plan.
+4. **Plan phase**: Propose a step-by-step implementation plan derived from the approved spec file.
+5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion.
+6. **Final quality phase**: After all planned steps are complete, re-check touched and impacted code and offer small, low-risk refactorings. Do not apply refactorings unless the user agrees.
+
+## Implementation Plan Format
+
+Present implementation plans as a table by default.
+
+- Plan steps must be small enough to review independently.
+- If scope changes during implementation, suggest returning to sparring/spec review and to update the spec and plan before continuing implementation.
+
+| Step | Change | Output | Gate |
+| --- | --- | --- | --- |
+| 1 | Implement the first backend change required by the approved spec. | The backend behavior for this step is implemented and ready for review. | Wait for explicit user approval before proceeding. |
+| 2 | Implement the first frontend or integration change required by the approved spec. | The corresponding consumer-facing or cross-layer behavior for this step is implemented and ready for review. | Wait for explicit user approval before proceeding. |
+
+## Spec Authoring Guardrail
+
 - New specs must be created from `docs/specs/_template-spec.md`.
 - Do not define separate spec-authoring process rules outside the template; keep them centralized in the template file.
-
-Mandatory ordering constraints for the implementation plan:
-
-- The first plan step must always run `docs-guidance-check` (when available) and address/handle findings according to `skills/docs-guidance-check/SKILL.md` (`Severity Rules`).
-- The second-to-last plan step must run `decisions-prune-pass` to clean `docs/decisions.md`.
-- The last plan step must always run `docs-state-sync` in proposal mode, using the pruned decisions state as input.
