@@ -28,5 +28,5 @@ Present implementation plans as a table by default.
 
 ## Spec Authoring Guardrail
 
-- New specs must be created from `docs/specs/_template-spec.md`.
+- New specs must be created from `docs/templates/_template-spec.md`.
 - Do not define separate spec-authoring process rules outside the template; keep them centralized in the template file.

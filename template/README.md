@@ -33,10 +33,17 @@ Use it as the root documentation contract for your project. Replace the placehol
 1. `AGENTS.md` (repo root): global working rules and constraints.
 2. `README.md`: this contract and navigation.
 3. `docs/specs/*`: active feature specs and acceptance criteria. Remove if unused.
-4. `docs/frontend-style.md`: frontend UI style baseline for implementation consistency. Remove if unused.
+4. `docs/frontend-style.md`: frontend UI style baseline for implementation consistency. `[Remove if the project does not contain a UI.]`
+
+## Workflows
+
+Use workflows only when explicitly prompted to do so by the user.
+
+- Spec-Driven Delivery Workflow (`/docs/workflows/spec-driven-delivery.md`)
+- Frontend Style Audit Workflow (`/docs/workflows/style-audit-workflow.md`)
 
 ## Assistant Contract
 
-- For frontend UI or styling work, treat `docs/frontend-style.md` as required context if your project uses it. `[Remove this section if the project does not contain a UI.]`
-- Keep new feature specs in `docs/specs/` and create them from `docs/specs/_template-spec.md` if your project uses spec-driven delivery.
-- Keep spec-authoring rules centralized in `docs/specs/_template-spec.md`; do not duplicate or extend them in other docs.
+- For frontend UI or styling work, treat `docs/frontend-style.md` as required context if your project uses it. `[Remove if the project does not contain a UI.]`
+- Keep new feature specs in `docs/specs/` and create them from `docs/templates/_template-spec.md` if your project uses spec-driven delivery.
+- Keep spec-authoring rules centralized in `docs/templates/_template-spec.md`; do not duplicate or extend them in other docs.
