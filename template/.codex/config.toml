@@ -1,0 +1,11 @@
+[mcp_servers.angular-cli]
+args = ["-y", "@angular/cli", "mcp"]
+command = "npx"
+enabled = true
+
+[mcp_servers.openaiDeveloperDocs]
+enabled = true
+url = "https://developers.openai.com/mcp"
+
+[mcp_servers.openaiDeveloperDocs.tools.fetch_openai_doc]
+approval_mode = "approve"
