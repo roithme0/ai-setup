@@ -15,3 +15,6 @@ approval_mode = "approve"
 
 [mcp_servers.openaiDeveloperDocs.tools.get_openapi_spec]
 approval_mode = "approve"
+
+[mcp_servers.openaiDeveloperDocs.tools.search_openai_docs]
+approval_mode = "approve"
