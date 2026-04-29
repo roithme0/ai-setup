@@ -4,8 +4,14 @@ command = "npx"
 enabled = true
 
 [mcp_servers.openaiDeveloperDocs]
-enabled = true
 url = "https://developers.openai.com/mcp"
+enabled = true
 
 [mcp_servers.openaiDeveloperDocs.tools.fetch_openai_doc]
+approval_mode = "approve"
+
+[mcp_servers.openaiDeveloperDocs.tools.list_api_endpoints]
+approval_mode = "approve"
+
+[mcp_servers.openaiDeveloperDocs.tools.get_openapi_spec]
 approval_mode = "approve"
