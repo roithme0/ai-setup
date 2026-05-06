@@ -9,10 +9,19 @@
 
 1. **Sparring phase**: Collaboratively develop the concept in chat until scope and behavior are clear. Before requesting user confirmation, ask all clarifying questions required to draft the spec, following the clarification batch limit.
 2. **Spec phase**: Document the agreed sparring result in a spec file before implementation planning.
-3. **Spec review phase**: Request explicit user review of the spec file and discuss details before suggesting a step-by-step implementation plan.
+3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
 4. **Plan phase**: Propose a step-by-step implementation plan derived from the approved spec file.
 5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion.
 6. **Final quality phase**: After all planned steps are complete, re-check touched and impacted code and offer small, low-risk refactorings. Do not apply refactorings unless the user agrees.
+
+## Spec Review Requirements
+
+- Review created and related spec file(s) together, not in isolation.
+- Check for incompatibilities between related specs.
+- Check for conflicts between the spec(s) and the existing codebase, architecture, or established contracts.
+- Check for missing required details and insufficiently specified behavior.
+- Explicitly look for underspecified contracts, edge cases, error handling, testing expectations, and acceptance criteria.
+- Surface findings and unresolved gaps before asking the user for review.
 
 ## Implementation Plan Format
 
