@@ -11,7 +11,7 @@
 2. **Spec phase**: Document the agreed sparring result in a spec file before implementation planning.
 3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
 4. **Plan phase**: Document a step-by-step implementation plan derived from the approved spec file in a markdown file under `docs/plans/`. The `plans` folder lives alongside `docs/specs/`.
-5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion.
+5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion. Keep the plan file up to date by marking each step state (`todo` or `done`) and, for implemented steps, adding brief implementation notes only when there is something noteworthy to record.
 6. **Final quality phase**: After all planned steps are complete, re-check touched and impacted code and offer small, low-risk refactorings. Do not apply refactorings unless the user agrees.
 
 ## Spec Review Requirements
@@ -31,12 +31,14 @@ Present implementation plans as a table by default.
 
 - Plan file names must follow `YYYY-MM-DD-<short-kebab-title>-plan.md`.
 - Plan steps must be small enough to review independently.
+- Include a `State` column for each step and use `todo` and `done` as the step states.
+- Include an `Implementation Notes` column. Keep notes brief and compact, and only record noteworthy items such as deviations from the plan or spec, risks, or refactoring opportunities.
 - If scope changes during implementation, suggest returning to sparring/spec review and to update the spec and plan before continuing implementation.
 
-| Step | Change | Output |
-| --- | --- | --- |
-| 1 | Implement the first backend change required by the approved spec. | The backend behavior for this step is implemented and ready for review. |
-| 2 | Implement the first frontend or integration change required by the approved spec. | The corresponding consumer-facing or cross-layer behavior for this step is implemented and ready for review. |
+| Step | State | Change | Output | Implementation Notes |
+| --- | --- | --- | --- | --- |
+| 1 | todo | Implement the first backend change required by the approved spec. | The backend behavior for this step is implemented and ready for review. | - |
+| 2 | todo | Implement the first frontend or integration change required by the approved spec. | The corresponding consumer-facing or cross-layer behavior for this step is implemented and ready for review. | - |
 
 ## Spec Authoring Guardrail
 
