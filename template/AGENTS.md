@@ -18,6 +18,7 @@
 - If a user message is phrased as a question, answer it in chat first and ask for explicit confirmation before making code or file changes.
 - Confirm before touching build or tooling config.
 - Summarize changes and call out risks.
+- Point out any dead code encountered.
 - Treat backend API as an internal contract for this repo's frontend by default: ship backend/frontend contract changes together, and do not preserve legacy compatibility unless explicitly required for a feature or an external consumer.
 
 ## Communication Preferences
