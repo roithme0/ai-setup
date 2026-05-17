@@ -9,7 +9,7 @@
 
 1. **Sparring phase**: Collaboratively develop the concept in chat until scope and behavior are clear. Before requesting user confirmation, ask all clarifying questions required to draft the spec, following the clarification batch limit.
 2. **Spec phase**: Document the agreed sparring result in a spec file before implementation planning.
-3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
+3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first alongside required clarifying questions required for you to refine the spec, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
 4. **Plan phase**: Document a step-by-step implementation plan derived from the approved spec file in a markdown file under `docs/plans/`. The `plans` folder lives alongside `docs/specs/`.
 5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion. Keep the plan file up to date by marking each step state (`todo` or `done`) and, for implemented steps, adding brief implementation notes only when there is something noteworthy to record.
 6. **Final quality phase**: After all planned steps are complete, re-check touched and impacted code and offer small, low-risk refactorings. Do not apply refactorings unless the user agrees.
