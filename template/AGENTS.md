@@ -7,7 +7,6 @@
 ## Coding Rules (Generic)
 
 - No destructive commands.
-- Prefer minimal changes and small diffs.
 - Avoid wide refactors without explicit confirmation.
 - Strict typing is required. Avoid `Any` and untyped parameters/returns.
 - Keep code comments to a minimum; avoid commenting the obvious.
