@@ -21,6 +21,8 @@ Use this skill to keep an existing `README.md` accurate and grounded in the repo
    - Check paths, scripts, configs, and active docs before updating README content.
    - Prefer `rg`, `find`, `sed`, `package.json`, `angular.json`, and the actual source tree over assumptions.
    - Treat commands, folder descriptions, tooling versions, localization details, and workflow references as claims that must be verified.
+   - When available, spawning subagents is allowed for bounded parallel verification of independent repo areas or documentation sets.
+   - Use subagents for evidence gathering, not for final README authorship. Give each subagent a narrow scope and integrate their findings yourself before editing.
 
 4. Update only what the repo supports.
    - Remove or correct stale claims.
