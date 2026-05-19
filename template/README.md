@@ -13,6 +13,15 @@ Use it as the root documentation contract for your project. Replace the placehol
   - `[Example: frontend/]`
   - `[Add or remove entries to match your repo.]`
 
+## Core Features
+
+List the features that define the project. Keep this section short and ordered by importance so contributors can quickly understand what matters most.
+
+- **Primary feature**: `[Describe the single most important capability of the project, the user it serves, and the expected outcome.]`
+- **Supporting features**:
+  - `[Add the next most important feature if needed.]`
+  - `[Remove this subsection if the project is centered around one core capability.]`
+
 ## Tech Stack
 
 - **Backend**: `[Replace or remove]`
@@ -35,9 +44,3 @@ Use workflows only when explicitly prompted to do so by the user.
 
 - Spec-Driven Delivery Workflow (`/docs/workflows/spec-driven-delivery.md`)
 - Frontend Style Audit Workflow (`/docs/workflows/style-audit-workflow.md`)
-
-## Assistant Contract
-
-- For frontend UI or styling work, treat `docs/frontend-style.md` as required context if your project uses it. `[Remove if the project does not contain a UI.]`
-- Keep new feature specs in `docs/specs/` and create them from `docs/templates/_template-spec.md` if your project uses spec-driven delivery.
-- Keep spec-authoring rules centralized in `docs/templates/_template-spec.md`; do not duplicate or extend them in other docs.
