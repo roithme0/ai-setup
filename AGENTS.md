@@ -1,12 +1,12 @@
 # Agents Guide
 
-## Rules (Generic)
+## Rules
 
 - No destructive commands.
 - Prefer minimal changes and small diffs.
 - Avoid wide refactors without explicit confirmation.
 
-## AI Workflow (Generic)
+## AI Workflow
 
 - Ask before large refactors.
 - If a user message is phrased as a question, answer it in chat first and ask for explicit confirmation before making code or file changes.
