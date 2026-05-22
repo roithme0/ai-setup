@@ -27,7 +27,7 @@
 ## Codebase Review Output Format
 
 - Start with a `Status` line: `no findings` or `findings`.
-- If findings exist, list each one with:
+- If findings exist, present them as an enumerated list (`1.`, `2.`, `3.`) and include for each item:
   - `Type`: `dead code`, `duplication`, `misplaced code`, or `structure drift`
   - `Location`
   - `Why it matters`
