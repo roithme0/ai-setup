@@ -30,7 +30,7 @@
   - `Type`: `dead code`, `duplication`, `misplaced code`, or `structure drift`
   - `Location`
   - `Why it matters`
-  - `Suggested follow-up`: `none`, `refactor in phase 7`, or `return to spec/plan`
+  - `Suggested follow-up`: `none`, or `return to spec/plan`
 
 ## Implementation Plan Format
 
