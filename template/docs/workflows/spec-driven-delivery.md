@@ -12,8 +12,7 @@
 3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first alongside required clarifying questions required for you to refine the spec, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
 4. **Plan phase**: Document a step-by-step implementation plan derived from the approved spec file in a markdown file under `docs/plans/`. The `plans` folder lives alongside `docs/specs/`.
 5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion. Keep the plan file up to date by marking each step state (`todo` or `done`) and, for implemented steps, adding brief implementation notes only when there is something noteworthy to record.
-6. **Codebase review phase**: After all planned steps are complete, revisit touched and impacted code from a broader codebase perspective. Check for dead code, duplication, misplaced responsibilities, and folder or module structure drift. Surface findings and discuss them with the user before proceeding.
-7. **Low-risk refactor phase**: After the codebase review phase is complete and the user explicitly approves continuing, offer small, low-risk refactorings based on the review findings. Do not apply refactorings unless the user agrees.
+6. **Codebase review phase**: After all planned steps are complete, revisit touched and impacted code from a broader codebase perspective. Check for dead code, duplication, misplaced responsibilities, and folder or module structure drift. Surface findings and discuss them with the user.
 
 ## Spec Review Requirements
 
