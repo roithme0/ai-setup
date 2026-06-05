@@ -9,7 +9,8 @@ The root of this repository explains the template package itself. The reusable f
 - [`template/AGENTS.md`](./template/AGENTS.md): baseline agent operating rules for a target project.
 - [`template/README.md`](./template/README.md): source-of-truth and context-loading guide intended for the target project.
 - [`template/.codex/config.toml`](./template/.codex/config.toml): optional project-level Codex config with a small starter set of MCP servers. Remove entries you do not want in the target project.
-- [`template/docs/`](./template/docs): workflow and documentation conventions for spec-driven delivery.
+- [`template/.codex/workflows/`](./template/.codex/workflows): reusable Codex workflow guides.
+- [`template/.codex/templates/`](./template/.codex/templates): reusable templates referenced by those workflows.
 - [`template/.codex/skills/`](./template/.codex/skills): reusable review and quality-check skills.
 - [`template/ui-templates/`](./template/ui-templates): reserved space for reusable UI starter assets.
 
@@ -18,7 +19,7 @@ The root of this repository explains the template package itself. The reusable f
 1. Copy the contents of [`template/`](./template) into the root of your project.
 2. Review `AGENTS.md` and `README.md` first, then adjust them to match your stack, workflows, and constraints.
 3. Review `.codex/config.toml` and remove any MCP servers or Codex settings you do not want before using the template in a target project.
-4. Update the docs in `docs/` so they describe your actual project rather than this starter baseline.
+4. Update the docs in `docs/` and `.codex/` so they describe your actual project rather than this starter baseline.
 5. Remove parts you will not maintain. A smaller, accurate setup is better than a larger stale one.
 
 ## What To Customize First
@@ -26,8 +27,9 @@ The root of this repository explains the template package itself. The reusable f
 - Project goal and scope in `README.md`
 - Stack- or framework-specific rules in `AGENTS.md`
 - Optional MCP servers and Codex settings in `.codex/config.toml`
-- Delivery workflow in `docs/spec-driven-delivery.md`
+- Delivery workflow in `.codex/workflows/spec-driven-delivery.md`
 - UI/style guidance in `docs/frontend-style.md`
+- Workflow templates in `.codex/templates/`
 - Any skills that reference tools, directories, or workflows your project does not use
 
 ## Repo Layout
@@ -37,7 +39,9 @@ The root of this repository explains the template package itself. The reusable f
 ├── README.md
 └── template/
     ├── .codex/
-    │   └── skills/
+    │   ├── skills/
+    │   ├── templates/
+    │   └── workflows/
     ├── AGENTS.md
     ├── README.md
     ├── docs/

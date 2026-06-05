@@ -81,7 +81,7 @@ If important parts of the product are missing from the image set, note the gap a
    - what is fixed versus open to interpretation
 
 7. **Contract drafting phase**
-   Populate `docs/frontend-style.md` using `docs/templates/_template-frontend-style.md`.
+   Populate `docs/frontend-style.md` using `.codex/templates/_template-frontend-style.md`.
    The contract should be concise, specific, and rule-oriented.
    Prefer statements like:
    - "Accent color is reserved for primary actions and active states."

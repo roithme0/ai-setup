@@ -42,5 +42,5 @@ List the features that define the project. Keep this section short and ordered b
 
 Use workflows only when explicitly prompted to do so by the user.
 
-- Spec-Driven Delivery Workflow (`/docs/workflows/spec-driven-delivery.md`)
-- Frontend Style Audit Workflow (`/docs/workflows/style-audit-workflow.md`)
+- Spec-Driven Delivery Workflow (`/.codex/workflows/spec-driven-delivery.md`)
+- Frontend Style Audit Workflow (`/.codex/workflows/style-audit-workflow.md`)

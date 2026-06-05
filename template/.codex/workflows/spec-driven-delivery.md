@@ -12,7 +12,7 @@
 3. **Spec review phase**: Before requesting user review, the assistant must review and double-check the created spec file(s). Spawning subagents is allowed for this review. Surface review findings first alongside required clarifying questions required for you to refine the spec, then request explicit user review of the spec file(s) and discuss details before suggesting a step-by-step implementation plan.
 4. **Plan phase**: Document a step-by-step implementation plan derived from the approved spec file in a markdown file under `docs/plans/`. The `plans` folder lives alongside `docs/specs/`.
 5. **Implementation phase**: Execute exactly one planned step at a time, then pause for user review and discussion. Keep the plan file up to date by marking each step state (`todo` or `done`) and, for implemented steps, adding brief implementation notes only when there is something noteworthy to record.
-6. **Codebase review phase**: After all planned steps are complete, revisit touched and impacted code from a broader codebase perspective. Check for dead code, duplication, misplaced responsibilities, and folder or module structure drift. Surface findings and discuss them with the user.
+6. **Codebase review phase**: After all planned steps are complete, revisit touched and impacted code from a broader codebase perspective. Check for dead code, code bloat, duplication, misplaced responsibilities, and folder or module structure drift. Surface findings and discuss them with the user.
 
 ## Spec Review Requirements
 
@@ -27,10 +27,10 @@
 
 - Start with a `Status` line: `no findings` or `findings`.
 - If findings exist, present them as an enumerated list (`1.`, `2.`, `3.`) and include for each item:
-  - `Type`: `dead code`, `duplication`, `misplaced code`, or `structure drift`
+  - `Type`: `dead code`, `bloated code`, `duplication`, `misplaced code`, `structure drift`, ...
   - `Location`
   - `Why it matters`
-  - `Suggested follow-up`: `none`, or `return to spec/plan`
+  - `Suggested follow-up`
 
 ## Implementation Plan Format
 
@@ -51,5 +51,5 @@ Present implementation plans as a table by default.
 
 ## Spec Authoring Guardrail
 
-- New specs must be created from `docs/templates/_template-spec.md`.
+- New specs must be created from `.codex/templates/_template-spec.md`.
 - Do not define separate spec-authoring process rules outside the template; keep them centralized in the template file.
