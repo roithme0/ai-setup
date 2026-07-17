@@ -22,13 +22,6 @@ List the features that define the project. Keep this section short and ordered b
 - **Primary UI library**: `[Replace or remove]`
 - **Other important tooling**: `[Add items worth knowing before implementation]`
 
-## Canonical Reading Order
-
-1. `AGENTS.md` (repo root): global working rules and constraints.
-2. `README.md`: this contract and navigation.
-3. `docs/specs/*`: active feature specs and acceptance criteria. Remove if unused.
-4. `docs/frontend-style.md`: frontend UI style baseline for implementation consistency. `[Remove if the project does not contain a UI.]`
-
 ## Workflows
 
 Use workflows only when explicitly prompted to do so by the user.
