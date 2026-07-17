@@ -7,5 +7,5 @@
 /template/docs/specs/frontend/*
 !/template/docs/specs/frontend/.gitkeep
 
-/template/ui-tempaltes/*
-!/template/ui-tempaltes/.gitkeep
+/template/frontend-tempaltes/*
+!/template/frontend-tempaltes/.gitkeep
