@@ -4,15 +4,6 @@ This file is intended to be mandatory project context for both humans and coding
 
 Use it as the root documentation contract for your project. Replace the placeholder content below with project-specific details, and remove sections or lines you will not maintain.
 
-## Project Snapshot
-
-- **Project name**: `[Replace with your project name]`
-- **Project goal**: `[Describe what the project is for, who it serves, and the main outcome it should deliver.]`
-- **Main repository areas**:
-  - `[Example: backend/]`
-  - `[Example: frontend/]`
-  - `[Add or remove entries to match your repo.]`
-
 ## Core Features
 
 List the features that define the project. Keep this section short and ordered by importance so contributors can quickly understand what matters most.
