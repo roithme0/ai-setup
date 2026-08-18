@@ -1,4 +1,0 @@
-interface:
-  display_name: "Backend Quality Scan"
-  short_description: "Scan backend for top code quality issues"
-  default_prompt: "Scan backend/ for top code quality issues (max 3) and report with a divider between issues, plus file refs and impact."
