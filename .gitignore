@@ -6,6 +6,3 @@
 
 /template/docs/specs/frontend/*
 !/template/docs/specs/frontend/.gitkeep
-
-/template/frontend-tempaltes/*
-!/template/frontend-tempaltes/.gitkeep

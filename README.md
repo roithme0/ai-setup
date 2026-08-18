@@ -12,7 +12,6 @@ The root of this repository explains the template package itself. The reusable f
 - [`template/.codex/workflows/`](./template/.codex/workflows): reusable Codex workflow guides.
 - [`template/.codex/templates/`](./template/.codex/templates): reusable templates referenced by those workflows.
 - [`template/.codex/skills/`](./template/.codex/skills): reusable review and quality-check skills.
-- [`template/frontend-templates/`](./template/frontend-templates): reserved space for reusable UI starter assets.
 
 ## How To Use It
 
@@ -28,7 +27,6 @@ The root of this repository explains the template package itself. The reusable f
 - Stack- or framework-specific rules in `AGENTS.md`
 - Optional MCP servers and Codex settings in `.codex/config.toml`
 - Delivery workflow in `.codex/workflows/spec-driven-delivery.md`
-- UI/style guidance in `docs/frontend-style.md`
 - Workflow templates in `.codex/templates/`
 - Any skills that reference tools, directories, or workflows your project does not use
 
@@ -44,8 +42,7 @@ The root of this repository explains the template package itself. The reusable f
     │   └── workflows/
     ├── AGENTS.md
     ├── README.md
-    ├── docs/
-    └── frontend-templates/
+    └── docs/
 ```
 
 ## Maintainer Notes
